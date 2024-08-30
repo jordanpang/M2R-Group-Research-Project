@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{titlesec}
+\usepackage{titletoc}
+
+% Customizing paragraph and subparagraph to include numbering and appear in the table of contents
+\titleformat{\paragraph}
+  {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\renewcommand\theparagraph{\thesubsubsection.\arabic{paragraph}}
+\setcounter{secnumdepth}{4}
+
+\titleformat{\subparagraph}
+  {\normalfont\normalsize\itshape}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\renewcommand\thesubparagraph{\theparagraph.\arabic{subparagraph}}
+\setcounter{secnumdepth}{5}
+
+\begin{document}
+\tableofcontents
+
+\section{Section Level}
+This is a section.
+
+\subsection{Subsection Level}
+This is a subsection.
+
+\subsubsection{Subsubsection Level}
+This is a subsubsection.
+
+\paragraph{Paragraph Level}
+This is a paragraph.
+
+\subparagraph{Subparagraph Level}
+This is a subparagraph.
+
+\paragraph{Another Paragraph}
+This is another paragraph.
+
+\subparagraph{Another Subparagraph}
+This is another subparagraph.
+
+\end{document}
